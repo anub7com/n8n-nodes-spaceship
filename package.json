@@ -1,0 +1,45 @@
+{
+  "name": "n8n-nodes-spaceship",
+  "version": "1.0.0",
+  "description": "Spaceship.com n8n node",
+  "main": "dist/nodes/Spaceship/Spaceship.node.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "copy nodes\\Spaceship\\*.svg dist\\nodes\\Spaceship\\ && copy nodes\\Spaceship\\*.json dist\\nodes\\Spaceship\\",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "spaceship",
+    "domain",
+    "dns",
+    "domain-management",
+    "domain-registration"
+  ],
+  "author": "Anub LLC",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/n8n-nodes-spaceship#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/n8n-nodes-spaceship.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/n8n-nodes-spaceship/issues"
+  },
+  "devDependencies": {
+    "n8n-workflow": "^1.0.0",
+    "typescript": "^5.9.3"
+  },
+  "n8n": {
+    "credentials": [
+      "dist/credentials/SpaceshipApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Spaceship/Spaceship.node.js"
+    ]
+  }
+}

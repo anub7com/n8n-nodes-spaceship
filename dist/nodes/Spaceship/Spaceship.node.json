@@ -1,0 +1,18 @@
+{
+  "node": "github.com/n8n-io/n8n/nodes/spaceship/Spaceship.node.js",
+  "name": "Spaceship",
+  "displayName": "Spaceship",
+  "icon": "file:spaceship.svg",
+  "group": ["transform"],
+  "version": 1,
+  "description": "Interact with Spaceship.com API",
+  "defaults": {
+    "name": "Spaceship"
+  },
+  "credentials": [
+    {
+      "name": "spaceshipApi",
+      "required": true
+    }
+  ]
+}
